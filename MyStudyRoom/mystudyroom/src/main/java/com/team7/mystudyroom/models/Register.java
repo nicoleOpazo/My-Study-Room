@@ -16,6 +16,11 @@ public class Register {
     private String password;
 
     
+    
+
+
+
+
     public Register() {
     }
 
