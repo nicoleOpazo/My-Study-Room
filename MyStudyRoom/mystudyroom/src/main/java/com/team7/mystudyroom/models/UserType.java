@@ -15,9 +15,6 @@ public class UserType {
 
     private String user_type_name;
 
-    
-    
-
     //Relación 1 a 1 UserType con Admin (da)
     @OneToOne(mappedBy = "userType", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Admin admin;

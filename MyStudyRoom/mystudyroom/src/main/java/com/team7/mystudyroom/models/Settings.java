@@ -1,5 +1,7 @@
 package com.team7.mystudyroom.models;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -7,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity(name = "Settings")
@@ -19,9 +22,14 @@ public class Settings {
     @OneToOne(mappedBy = "settings", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Pomodoro pomodoro;
 
+    //Recibe llave foranea de User
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
     private User user;
+
+    //Relacion de uno es a muchos OneToMany con Long tip
+    @OneToMany(mappedBy = "settings", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<LongTip> longTip;
 
     public Settings() {
     }
