@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MystudyroomApplication<mystudyroom>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.team7.mystudyroom.MystudyroomApplication",
+            "projectName": "mystudyroom",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

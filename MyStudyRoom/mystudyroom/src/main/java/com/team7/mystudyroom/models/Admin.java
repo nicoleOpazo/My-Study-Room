@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-@Entity
+@Entity(name = "Admin")
 public class Admin {
     @Id
     @GeneratedValue
@@ -21,9 +21,6 @@ public class Admin {
     @JoinColumn(name = "user_type_id")
     private UserType userType;
 
-
-
-    
     public Admin() {
     }
 
@@ -74,7 +71,5 @@ public class Admin {
     public void setUserType(UserType userType) {
         this.userType = userType;
     }
-    
 
-    
 }

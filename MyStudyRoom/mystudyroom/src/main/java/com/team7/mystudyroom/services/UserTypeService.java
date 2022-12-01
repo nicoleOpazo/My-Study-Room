@@ -14,24 +14,25 @@ import com.team7.mystudyroom.repositories.UserTypeRepository;
 public class UserTypeService {
     private UserTypeRepository userTypeRepository;
 
-    public UserTypeService(UserTypeRepository userTypeRepository){
+    // permiso para que el service interactua con el repositorio
+    public UserTypeService(UserTypeRepository userTypeRepository) {
         this.userTypeRepository = userTypeRepository;
     }
 
-    public void saveUserType(UserType userType){
+    public void saveUserType(UserType userType) {
         userTypeRepository.save(userType);
     }
 
-    public void updateUserType(UserType userType){
+    public void updateUserType(UserType userType) {
         userTypeRepository.save(userType);
     }
 
-    public List <UserType> findAll(){
+    public List<UserType> findAll() {
         return userTypeRepository.findAll();
     }
 
-    public void eliminarUserType(Integer user_type_id){
+    public void eliminarUserType(Integer user_type_id) {
         userTypeRepository.deleteById(user_type_id);
     }
-    
+
 }
