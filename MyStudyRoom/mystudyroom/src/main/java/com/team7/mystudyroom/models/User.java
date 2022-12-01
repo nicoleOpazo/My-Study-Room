@@ -1,5 +1,7 @@
 package com.team7.mystudyroom.models;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -9,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+
 
 @Entity(name = "User")
 public class User {
@@ -25,8 +28,9 @@ public class User {
     @JoinColumn(name="register_id")
     private Register register;
 
-    @OneToMany(mappedBy = "User", cascade = CascadeType.ALL, fetch= FetchType.EAGER)
-    private Settings settings;
+    //One to many EAGER entrega. Y el que entrega queda con la lista
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch= FetchType.EAGER)
+    private List <Settings> settings;
 
     //Relación 1 a muchos User con Register (recibe)
 

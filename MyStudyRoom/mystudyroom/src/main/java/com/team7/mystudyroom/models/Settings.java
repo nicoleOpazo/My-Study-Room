@@ -15,7 +15,8 @@ public class Settings {
     @GeneratedValue
     private Integer settings_id;
 
-    @OneToOne(mappedBy = "Settings", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    //Settings está entregando su llave a pomodoro
+    @OneToOne(mappedBy = "settings", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Pomodoro pomodoro;
 
     @ManyToOne(fetch = FetchType.LAZY)
