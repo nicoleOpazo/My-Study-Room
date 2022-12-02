@@ -30,18 +30,17 @@ public class Pomodoro {
     //One to many EAGER entrega y el que entrega queda con la lista. 
     @OneToMany(mappedBy = "pomodoro", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<ShortTip> shortTip;
-    
 
     public Pomodoro() {
     }
 
-    public Pomodoro(Integer pomodoro_id, int workingTime, int breakTime, Settings settings) {
+    public Pomodoro(Integer pomodoro_id, int workingTime, int breakTime, Settings settings, List<ShortTip> shortTip) {
         this.pomodoro_id = pomodoro_id;
         this.workingTime = workingTime;
         this.breakTime = breakTime;
         this.settings = settings;
+        this.shortTip = shortTip;
     }
-
 
     public Integer getPomodoro_id() {
         return pomodoro_id;
@@ -59,36 +58,32 @@ public class Pomodoro {
         this.workingTime = workingTime;
     }
 
-
-
-
     public int getBreakTime() {
         return breakTime;
     }
-
-
-
 
     public void setBreakTime(int breakTime) {
         this.breakTime = breakTime;
     }
 
-
-
-
     public Settings getSettings() {
         return settings;
     }
-
-
-
 
     public void setSettings(Settings settings) {
         this.settings = settings;
     }
 
+    public List<ShortTip> getShortTip() {
+        return shortTip;
+    }
 
+    public void setShortTip(List<ShortTip> shortTip) {
+        this.shortTip = shortTip;
+    }
     
+
+
 
     
 

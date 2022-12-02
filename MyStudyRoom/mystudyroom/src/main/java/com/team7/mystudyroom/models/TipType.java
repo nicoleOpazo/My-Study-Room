@@ -23,13 +23,14 @@ public class TipType {
     @OneToOne(mappedBy = "tipType", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private LongTip longTip;
 
-
     public TipType() {
     }
 
-    public TipType(Integer tipType_id, String tip_type_name) {
+    public TipType(Integer tipType_id, String tip_type_name, ShortTip shortTip, LongTip longTip) {
         this.tipType_id = tipType_id;
         this.tip_type_name = tip_type_name;
+        this.shortTip = shortTip;
+        this.longTip = longTip;
     }
 
     public Integer getTipType_id() {
@@ -47,6 +48,23 @@ public class TipType {
     public void setTip_type_name(String tip_type_name) {
         this.tip_type_name = tip_type_name;
     }
+
+    public ShortTip getShortTip() {
+        return shortTip;
+    }
+
+    public void setShortTip(ShortTip shortTip) {
+        this.shortTip = shortTip;
+    }
+
+    public LongTip getLongTip() {
+        return longTip;
+    }
+
+    public void setLongTip(LongTip longTip) {
+        this.longTip = longTip;
+    }
+
 
     
 

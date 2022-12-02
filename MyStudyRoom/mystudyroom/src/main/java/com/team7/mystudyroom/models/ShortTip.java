@@ -31,4 +31,57 @@ public class ShortTip {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="pomodoro_id")
     private Pomodoro pomodoro;
+
+    public ShortTip() {
+    }
+
+    public ShortTip(Integer shortTip_id, String name, String content, TipType tipType, Pomodoro pomodoro) {
+        this.shortTip_id = shortTip_id;
+        this.name = name;
+        this.content = content;
+        this.tipType = tipType;
+        this.pomodoro = pomodoro;
+    }
+
+    public Integer getShortTip_id() {
+        return shortTip_id;
+    }
+
+    public void setShortTip_id(Integer shortTip_id) {
+        this.shortTip_id = shortTip_id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public TipType getTipType() {
+        return tipType;
+    }
+
+    public void setTipType(TipType tipType) {
+        this.tipType = tipType;
+    }
+
+    public Pomodoro getPomodoro() {
+        return pomodoro;
+    }
+
+    public void setPomodoro(Pomodoro pomodoro) {
+        this.pomodoro = pomodoro;
+    }
+
+    
 }

@@ -1,9 +1,12 @@
 package com.team7.mystudyroom.services;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
+import com.team7.mystudyroom.models.TipType;
 import com.team7.mystudyroom.repositories.TipTypeRepository;
 
 @Service
@@ -15,20 +18,20 @@ public class TipTypeService {
         this.tipTypeRepository = tipTypeRepository;
     }
 
-    public void saveTipType(TipTypeRepository tipTypeRepository){
+    public void saveTipType(TipType tipType){
         tipTypeRepository.save(tipType);
     }
 
-    public void updateUserType(UserType userType){
-        userTypeRepository.save(userType);
+    public void updateTipType(TipType tipType){
+        tipTypeRepository.save(tipType);
     }
 
-    public List <UserType> findAll(){
-        return userTypeRepository.findAll();
+    public List <TipType> findAll(){
+        return tipTypeRepository.findAll();
     }
 
-    public void eliminarUserType(Integer user_type_id){
-        userTypeRepository.deleteById(user_type_id);
+    public void eliminarTipType(Integer tipType_id){
+        tipTypeRepository.deleteById(tipType_id);
     }
     
 }
