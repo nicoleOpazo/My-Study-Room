@@ -1,8 +1,7 @@
 package com.team7.mystudyroom.services;
 
 import java.util.List;
-
-import javax.transaction.Transactional;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -10,28 +9,38 @@ import com.team7.mystudyroom.models.UserType;
 import com.team7.mystudyroom.repositories.UserTypeRepository;
 
 @Service
-@Transactional
-public class UserTypeService {
+public class UserTypeService implements UserTypeServiceImpl {
     private UserTypeRepository userTypeRepository;
 
     public UserTypeService(UserTypeRepository userTypeRepository){
         this.userTypeRepository = userTypeRepository;
     }
 
-    public void saveUserType(UserType userType){
-        userTypeRepository.save(userType);
+
+    @Override
+    public UserType getUserType(Integer user_type_id) {
+        Optional <UserType> userTypes = userTypeRepository.findById(user_type_id);
+        // TODO Auto-generated method stub
+        return userTypes.orElse(null);
     }
 
-    public void updateUserType(UserType userType){
-        userTypeRepository.save(userType);
+    @Override
+    public UserType save(UserType userType) {
+        // TODO Auto-generated method stub
+        return userTypeRepository.save(userType);
     }
 
-    public List <UserType> findAll(){
-        return userTypeRepository.findAll();
-    }
-
-    public void eliminarUserType(Integer user_type_id){
+    @Override
+    public void delete(Integer user_type_id) {
+        // TODO Auto-generated method stub
         userTypeRepository.deleteById(user_type_id);
+        
+    }
+
+    @Override
+    public List<UserType> getAllUserTypes() {
+        // TODO Auto-generated method stub
+        return userTypeRepository.findAll();
     }
     
 }

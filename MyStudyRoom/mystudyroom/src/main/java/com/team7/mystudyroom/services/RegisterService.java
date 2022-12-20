@@ -11,6 +11,7 @@ import com.team7.mystudyroom.repositories.RegisterRepository;
 @Service
 @Transactional
 public class RegisterService {
+    
     private RegisterRepository registerRepository;
 
     public RegisterService(RegisterRepository registerRepository){

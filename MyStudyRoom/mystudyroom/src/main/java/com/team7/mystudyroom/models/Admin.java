@@ -5,6 +5,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -17,8 +18,12 @@ public class Admin {
     private String email;
     private String password;
 
-    @OneToOne(fetch = FetchType.EAGER)
+/*     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_type_id")
+    private UserType userType; */
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name= "user_type_id")
     private UserType userType;
 
 
