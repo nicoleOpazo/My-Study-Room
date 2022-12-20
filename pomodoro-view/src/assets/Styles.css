@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:fullscreen {
+    background-image: url(./lofi-wpp.png);
+    background-attachment: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    background-image: url(./lofi-wpp.png);
+    background-attachment: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/*Menú desplegable*/
+.btn-menu-logo {
+    background-color: transparent;
+    border: none;
+    margin-top: 1%;
+}
+
+.liMenu {
+    /* border: 1px solid rgba(0, 0, 0, 0.18);
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.464); */
+    list-style: none;
+    padding-top: 7px;
+    margin-left: -15px;
+}
+
+.li-noti {
+    list-style: none;
+    padding-top: 5px;
+}
+
+i {
+    display: flex;
+    padding-right: 15px;
+    padding-bottom: 9px;
+    color: white;
+}
+
+h5 {
+    font-size: medium;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100;
+}
+
+h4 {
+    color: black;
+    transform: rotate(90deg);
+}
+
+.btn-menu {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    direction: row;
+    padding-bottom: 18px;
+}
+
+.fa-bars{
+    margin-left: 7px;
+    color: white;
+}
+
+.fa-angle-double-down {
+    color: rgb(30, 30, 30);
+}
+
+.fa-file-import {
+    margin-left: -4px;
+}
+
+.boton-notificaciones {
+    
+}
+
+.ulMenu {
+    background-color: rgba(3, 0, 17, 0.916);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.245);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.056);
+    border-left: 1px solid rgba(255, 255, 255, 0.056);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 25px;
+
+    width: 205px;
+    margin-left: 6px;
+    margin-top: 1%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.cont-not {
+    background-color: rgba(0, 0, 0, 0.77);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.245);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.056);
+    border-left: 1px solid rgba(255, 255, 255, 0.056);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 25px;
+
+    margin-top: 5px;
+    margin-right: 5px;
+    padding-top: 3px;
+    padding-left: auto;
+    padding-right: auto;
+
+}
+
+h1 {
+    height: 0.1px;
+    background-color: rgba(255, 255, 255, 0.20);
+    width: 203px;
+    margin-left: -32px;
+}
+
+.img-logo {
+    width: 50px;
+}
+
+/* Botón zen */
+.botoncito {
+    width: 40px;
+    height: 40px;
+}
+
+.zen {
+    width: 54px;
+    block-size: 54px;
+    
+    /* color: rgb(218, 216, 216);*/
+    background-color: transparent;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.634);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.056);
+    border-left: 1px solid rgba(255, 255, 255, 0.056);
+    backdrop-filter: blur(5px);
+}
+
+/*Barra de navegación*/
+header {
+    width: fit-content;
+    block-size: fit-content;
+    
+    /* color: rgb(218, 216, 216);*/
+    background-color: transparent;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.245);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.056);
+    border-left: 1px solid rgba(255, 255, 255, 0.056);
+    backdrop-filter: blur(5px);
+}
+
+/* Theme Switch */
+/* #light {
+    background-color: rgb(236, 39, 167);
+    background-attachment: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#dark {
+    background-color: rgb(46, 46, 185);
+    background-attachment: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+} */
+
+.switch-theme {
+    margin-right: 5%;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* background-image: url(./day-sky.jpg);  */
+    background-attachment: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: bottom;
+    background-color: rgb(209, 171, 21);
+
+    transition: 0.3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3.7px;
+    bottom: 3px;
+    transition: 0.3s;
+
+    background-color: white;
+}
+
+input:checked + .slider{
+    /* background-image: url(./blue-starry-night.jpg); */
+    background-attachment: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: bottom;
+    background-color: rgb(46, 46, 46);
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+    background-color: rgb(159, 159, 234);
+    width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.4px);
+    border-radius: 10px;
+}
+
+.wrapper header {
+    font-size: 23px;
+    font-weight: 500;
+    padding: 17px 30px;
+    border-bottom: 1px solid black;
+}
+
+.wrapper content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 30px 40px;
+}
+
+.content .icon {
+    height: 95px;
+    width: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 5px solid rgb(159, 159, 234);
+}
+
+.content .icon i {
+    color: rgb(159, 159, 234);
+    font-size: 60px;
+}
+
+.content .title {
+    font-size: 29px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.fondo {
+    background-image: url(./pomodoro-wpp.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.main {
+    margin: auto;
+    position: relative;
+}
+
+.divmenu {
+    display: flex;
+    height: 100vh;
+    overflow: scroll initial;
+}
+/*style={{ display: 'flex', height: '100vh', overflow: 'scroll initial'}}*/
+
+.pie {
+    background-image: url(./pomodoro-foot.png);
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    margin-left: 15px;
+}
+
+#menu {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 32px;
+    height: fit-content;
+}
+
+.items {
+    margin-right: 57px;
+}
+
+#boton {
+    font-size: x-large;
+}
+
+#pomodoro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -95px 0 0 -120px;
+    
+}
+
+#menuu {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.container {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 32px;
+    height: fit-content;
+    color: rgb(236, 234, 234);
+}
+
+.navbar {
+    background-color: transparent;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.font-monospace {
+    margin-left: 25px;
+    font-size: larger;
+    color: rgb(231, 231, 231);
+}
+
+.upbtn {
+    margin-left: 25px;
+    color: rgb(204, 204, 204);
+}
+
+.navcomponent {
+    width: 1290px;
+    position: fixed;
+}
+
+.navview {
+    display: flex;
+    justify-content: flex-end;
+}
